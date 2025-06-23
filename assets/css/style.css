@@ -1,0 +1,86 @@
+/* assets/css/style.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to top right, #fff0f5, #ffe4e1);
+    color: #333;
+    overflow-x: hidden;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #d6336c;
+  }
+  
+  button {
+    padding: 0.8rem 2rem;
+    background-color: #ff66b2;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #ff3385;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem;
+  }
+  
+  .gallery-img {
+    width: 200px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-img:hover {
+    transform: scale(1.05);
+  }
+  
+  .next-btn {
+    display: block;
+    margin: 2rem auto;
+ }
+ /*   
+  .next-page-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: #00c3ff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00c3ff;
+  transition: all 0.3s ease;
+  z-index: 999;
+  display: block;
+  margin: 2rem auto;
+}
+*/
+  
+  .photo-gallery, .cake-scene, .final-message {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+  

@@ -1,0 +1,75 @@
+<!-- page5.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Turn 💌</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .final-message {
+      text-align: center;
+      padding: 2rem;
+    }
+    textarea {
+      width: 90%;
+      max-width: 500px;
+      height: 150px;
+      padding: 1rem;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    .submit-btn {
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      background-color: #ff66b2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .thank-you {
+      display: none;
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="final-message">
+    <h2>Now it’s your turn to say something... 💖</h2>
+    <form id="replyForm">
+      <textarea id="message" placeholder="Write something sweet..."></textarea><br />
+      <button class="submit-btn" type="submit">Send Message</button>
+      <p class="thank-you" id="thankYou">Thank you! Your message has been sent 💌</p>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('replyForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const message = document.getElementById('message').value;
+
+      fetch('https://formspree.io/f/xyyqoylr', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          message: message
+        })
+      })
+      .then(response => {
+        document.getElementById('thankYou').style.display = 'block';
+        document.getElementById('message').value = '';
+      })
+      .catch(error => alert('Something went wrong. Please try again.'));
+    });
+  </script>
+    <a href="C:\Users\Lenovo\Downloads\akshada\akshada-birthday-website\96\birthday-cake.html">
+  <button class="next-page-btn">Next</button>
+</body>
+</html>
