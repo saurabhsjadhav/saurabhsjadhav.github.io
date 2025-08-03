@@ -1,0 +1,147 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+  color: #333;
+  overflow-x: hidden;
+}
+/* Welcome Page Styles */
+.welcome-body {
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.welcome-container { animation: fadeIn 2s ease; }
+.welcome-title {
+  font-size: 3em;
+  color: #e91e63;
+  animation: zoomIn 1.5s ease;
+}
+.welcome-message {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  animation: fadeIn 2.5s ease;
+}
+.enter-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  background: #e91e63;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  animation: slideUp 2s ease;
+}
+.enter-btn:hover { background: #c2185b; }
+.creator {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #777;
+  animation: fadeIn 3s ease;
+}
+/* Slideshow Page Styles */
+.slideshow-body {
+  background: linear-gradient(-45deg, #f6d365, #fda085, #a1c4fd, #c2e9fb);
+  background-size: 400% 400%;
+  animation: backgroundAnim 15s ease infinite;
+  min-height: 100vh;
+  padding: 30px 20px;
+}
+@keyframes backgroundAnim {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+.slideshow-container h1 {
+  font-size: 2.5em;
+  color: #fff;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease;
+}
+.slideshow {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.slide { display: none; animation: fadeSlide 1s ease; }
+.slide.active { display: block; }
+.slide img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+.caption {
+  background: rgba(255, 255, 255, 0.9);
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  animation: fadeIn 1.5s ease;
+}
+.controls button {
+  margin: 10px;
+  padding: 10px 20px;
+  background: #e91e63;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.controls button:hover { background: #c2185b; }
+footer {
+  margin-top: 30px;
+  color: #fff;
+  font-size: 0.9em;
+}
+@keyframes fadeSlide {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.music-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.music-btn:hover {
+  background-color: #388e3c;
+}
+.music-control {
+  margin: 20px;
+}
+
+.music-control button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.music-control button:hover {
+  background-color: #388e3c;
+}

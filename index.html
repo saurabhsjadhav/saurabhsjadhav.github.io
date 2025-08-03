@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome - Friendship Day ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="welcome-body">
+  <div class="welcome-container">
+    <h1 class="welcome-title">Happy Friendship Day 🎉</h1>
+    <p class="welcome-message">A special surprise for my amazing friends 💖</p>
+    
+    <!-- Music Play Button -->
+    <button class="music-btn" onclick="playMusic()">🔊 Play Music</button>
+
+    <!-- Enter Button -->
+    <button class="enter-btn" onclick="enterSite()">Enter Website</button>
+
+    <p class="creator">Made with ❤️ by Saurabh</p>
+  </div>
+
+  <!-- Audio -->
+  <audio id="bg-music" loop>
+    <source src="C:\Users\Lenovo\Downloads\friendship_website\onecut.mp3" type="audio/mp3" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Script -->
+  <script>
+    const music = document.getElementById("bg-music");
+
+    function playMusic() {
+      music.play().catch(() => {
+        alert("Autoplay is blocked. Please interact again to allow music.");
+      });
+    }
+
+    function enterSite() {
+      music.play().finally(() => {
+        window.location.href = "slideshow.html";
+      });
+    }
+  </script>
+</body>
+</html>
